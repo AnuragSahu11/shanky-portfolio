@@ -42,6 +42,7 @@ const HomePage = () => {
         style={gradientCircleThree}
         className="w-[50rem] h-[50rem] rounded-full blur-3xl opacity-20 absolute	"
       ></div>
+      
       <HeroBanner />
       <WorkSection />
     </div>

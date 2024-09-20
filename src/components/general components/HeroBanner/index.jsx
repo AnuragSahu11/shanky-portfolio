@@ -1,3 +1,5 @@
+import TextScramble from "../TextScramble";
+
 const styles = {
   linearTextGradient: {
     background:
@@ -17,7 +19,7 @@ export const HeroBanner = () => {
           Hello! I’m <span style={linearTextGradient}>Shubhanshu</span>{" "}
         </p>
         <p className="text-5xl">
-          I <span className="italic font-thin">design</span> XR Experience
+          I <span className="italic font-thin">design</span> <TextScramble />
         </p>
       </div>
       <div className="w-1/2">
@@ -29,10 +31,10 @@ export const HeroBanner = () => {
           Gen AI.
         </p>
       </div>
-      <div className="mt-10 animate-bounce text-2xl">
+      <div className="mt-10 text-2xl absolute bottom-4">
         <SvgComponent />
         <p className="pt-1 font-thin text-sm">Scroll</p>
-        <span className="iconify mdi--chevron-double-down"></span>
+        <span className="iconify animate-bounce  mdi--chevron-double-down"></span>
       </div>
     </div>
   );

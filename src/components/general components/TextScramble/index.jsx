@@ -1,87 +1,47 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useScramble } from "use-scramble";
 
 const TextScramble = ({ texts }) => {
-  const [scrambledText, setScrambledText] = useState([]);
-  const chars = "!<>-_\\/[]{}—=+*^?#________";
-  const textRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const textIndex = useRef(0);
 
-  useEffect(() => {
-    const el = textRef.current;
-    const oldText = el.innerText;
-    const newText = texts[currentIndex] || "";
-    const length = Math.max(oldText.length, newText.length);
-    const queue = [];
+  const skills = [
+    "XR Experience",
+    "User Experience",
+    "User Interface",
+    "Graphics",
+    "Edit Videos",
+  ];
 
-    for (let i = 0; i < length; i++) {
-      const from = oldText[i] || "";
-      const to = newText[i] || "";
-      const start = Math.floor(Math.random() * 40);
-      const end = start + Math.floor(Math.random() * 40);
-      queue.push({
-        from,
-        to,
-        start,
-        end,
-        char: null,
-      });
+  function getRandomNumber() {
+    if (textIndex.current + 1 < skills.length) {
+      textIndex.current++;
+    } else {
+      textIndex.current = 0;
     }
+    return textIndex.current;
+  }
 
-    let frame = 0;
-    let complete = 0;
+  const generateWords = () => {
+    return skills[getRandomNumber()];
+  };
 
-    const update = () => {
-      const output = [];
+  const [scrambleText, setScrambleText] = useState("XR Experience");
 
-      for (let i = 0, n = queue.length; i < n; i++) {
-        let { from, to, start, end, char } = queue[i];
-
-        if (frame >= end) {
-          complete++;
-          output.push(to);
-        } else if (frame >= start) {
-          if (!char || Math.random() < 0.28) {
-            char = chars[Math.floor(Math.random() * chars.length)];
-            queue[i].char = char;
-          }
-
-          output.push(
-            <span className="dud" key={i}>
-              {char}
-            </span>
-          );
-        } else {
-          output.push(from);
-        }
-      }
-
-      // setScrambledText(output);
-
-      if (complete === queue.length) {
-        return;
-      } else {
-        requestAnimationFrame(update);
-        frame++;
-      }
-    };
-
-    update();
-  }, [currentIndex, texts]);
+  // hook returns a ref
+  const { ref } = useScramble({
+    text: scrambleText,
+    speed: 0.3,
+  });
 
   useEffect(() => {
-    console.log(texts);
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex >= texts.length ? 0 : prevIndex + 1
-      );
-    }, 5500); // Change text every 1 second
+    const intervalRf = setInterval(() => {
+      setScrambleText(generateWords());
+    }, 1500);
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [texts.length]);
+    return () => clearInterval(intervalRf);
+  }, []);
 
-  console.log(currentIndex);
-
-  return <span ref={textRef}>{scrambledText}</span>;
+  return <p ref={ref} />;
 };
 
 export default TextScramble;

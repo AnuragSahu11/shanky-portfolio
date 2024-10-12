@@ -5,11 +5,14 @@ const TextScramble = ({ texts }) => {
   const textIndex = useRef(0);
 
   const skills = [
-    "XR Experience",
-    "User Experience",
-    "User Interface",
-    "Graphics",
-    "Edit Videos",
+    "Porn websites",
+    "Scam ISIS websites",
+    "Sex"
+    // "XR Experience",
+    // "User Experience",
+    // "User Interface",
+    // "Graphics",
+    // "Edit Videos",
   ];
 
   function getRandomNumber() {

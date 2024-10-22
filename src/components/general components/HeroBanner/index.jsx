@@ -1,3 +1,4 @@
+import HoverEffectWrapper from "../HoverEffectWrapper/HoverEffectWrapper";
 import TextScramble from "../TextScramble";
 
 const styles = {
@@ -22,15 +23,15 @@ export const HeroBanner = () => {
           I <span className="italic font-thin">design</span> <TextScramble />
         </p>
       </div>
-      <div className="w-1/2">
-        <p className="font-thin">
-          A master’s student of Immersive Media Design from MITID Pune brings 4
-          years of combined experience as a graphic designer and UI/UX designer.
-          Additionally, I hold a certification in 3D animation and possess a
-          strong command of AI, adeptly creating and generating content using
-          Gen AI.
-        </p>
-      </div>
+        <div className="w-1/2">
+          <p className="font-thin">
+            A master’s student of Immersive Media Design from MITID Pune brings
+            4 years of combined experience as a graphic designer and UI/UX
+            designer. Additionally, I hold a certification in 3D animation and
+            possess a strong command of AI, adeptly creating and generating
+            content using Gen AI.
+          </p>
+        </div>
       <div className="mt-10 text-2xl absolute bottom-4">
         <SvgComponent />
         <p className="pt-1 font-thin text-sm">Scroll</p>

@@ -1,3 +1,5 @@
+import HoverEffectWrapper from "../../general components/HoverEffectWrapper/HoverEffectWrapper";
+
 const styleObj = {
   firstImg: {
     transform: "translate(-50%,0%)",
@@ -29,7 +31,11 @@ const WorkSection = () => {
           <p className="text-4xl font-bold">Work</p>
         </div>
         <div className="flex flex-col">
-          <div className="flex translate-x-[-20vw]">
+          {/* <div className="flex translate-x-[-20vw]"> */}
+          <HoverEffectWrapper
+            childClassName={"flex"}
+            className="flex translate-x-[-20vw]"
+          >
             <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
               <p className="">
                 Boxing
@@ -46,8 +52,12 @@ const WorkSection = () => {
                 }
               />
             </div>
-          </div>
-          <div className="flex translate-x-[20vw]">
+          </HoverEffectWrapper>
+          {/* </div> */}
+          <HoverEffectWrapper
+            childClassName={"flex"}
+            className="flex translate-x-[20vw]"
+          >
             <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
               <p className="">
                 Shubhi:
@@ -64,8 +74,30 @@ const WorkSection = () => {
                 }
               />
             </div>
-          </div>
-          <div className="flex translate-x-[-23vw]">
+          </HoverEffectWrapper>
+          {/* <div className="flex translate-x-[20vw]">
+            <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
+              <p className="">
+                Shubhi:
+                <br></br>
+                An Ai
+                <br></br>
+                Robot
+              </p>
+            </div>
+            <div>
+              <img
+                src={
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1726318779/Shubhi__An_AI_Robot.png"
+                }
+              />
+            </div>
+          </div> */}
+          <HoverEffectWrapper
+            className="flex translate-x-[-23vw]"
+            childClassName={"flex"}
+          >
+            {" "}
             <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
               <p className="">
                 Shubhi:
@@ -82,8 +114,12 @@ const WorkSection = () => {
                 }
               />
             </div>
-          </div>
-          <div className="flex translate-x-[15vw]">
+          </HoverEffectWrapper>
+          <HoverEffectWrapper
+            className="flex translate-x-[15vw]"
+            childClassName={"flex"}
+          >
+            {" "}
             <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
               <p className="">
                 Shubhi:
@@ -100,7 +136,43 @@ const WorkSection = () => {
                 }
               />
             </div>
-          </div>
+          </HoverEffectWrapper>
+          {/* <div className="flex translate-x-[-23vw]">
+            <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
+              <p className="">
+                Shubhi:
+                <br></br>
+                An Ai
+                <br></br>
+                Robot
+              </p>
+            </div>
+            <div>
+              <img
+                src={
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1726318779/RGZP__Motion_Graphics.png"
+                }
+              />
+            </div>
+          </div> */}
+          {/* <div className="flex translate-x-[15vw]">
+            <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
+              <p className="">
+                Shubhi:
+                <br></br>
+                An Ai
+                <br></br>
+                Robot
+              </p>
+            </div>
+            <div>
+              <img
+                src={
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1726318779/Ethnographic_Research__Carpenter.png"
+                }
+              />
+            </div>
+          </div> */}
         </div>
       </div>
     </div>

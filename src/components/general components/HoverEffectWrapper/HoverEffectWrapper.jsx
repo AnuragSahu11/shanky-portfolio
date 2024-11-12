@@ -22,7 +22,7 @@ const cardGlow = {
   height: "100%",
   left: "0",
   top: "0",
-  backgroundImage: "radial-gradient(circle at 50% -20%, #ffffff22, #0000000f)",
+  // backgroundImage: "radial-gradient(circle at 50% -20%, #ffffff22, #0000000f)",
 };
 
 const HoverEffectWrapper = ({ children, className, childClassName }) => {

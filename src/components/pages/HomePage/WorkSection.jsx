@@ -36,7 +36,12 @@ const WorkSection = () => {
             childClassName={"flex"}
             className="flex translate-x-[-20vw]"
           >
-            <div className="z-10 translate-x-[60px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5">
+            <div
+              // style={{
+              //   transform: "translateZ(42px)",
+              // }}
+              className="z-10 translate-z-[70px] translate-x-[90px] flex flex-col justify-end bottom-0 text-3xl font-semibold pr-5"
+            >
               <p className="">
                 Boxing
                 <br></br>
@@ -44,6 +49,11 @@ const WorkSection = () => {
                 <br></br>
                 in VR
               </p>
+              <div className="w-32	h-0.5 bg-white	my-1"></div>
+              <div className="flex items-center">
+                <p className="text-sm">Case Study </p>
+                <span className="ml-2 text-lg iconify mdi--arrow-right"></span>
+              </div>
             </div>
             <div>
               <img

@@ -6,7 +6,11 @@ addIconSelectors;
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        casanova: ["Casanova", "sans-serif"],
+      },
+    },
   },
   plugins: [addIconSelectors(["mdi", "mdi-light"])],
 };

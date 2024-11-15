@@ -1,5 +1,6 @@
 import { HeroBanner } from "../../components/general components/HeroBanner";
 import NavBar from "../../components/NavBar/NavBar";
+import ContactSection from "../../components/pages/HomePage/ContactSection";
 import WorkSection from "../../components/pages/HomePage/WorkSection";
 
 const styles = {
@@ -42,9 +43,10 @@ const HomePage = () => {
         style={gradientCircleThree}
         className="w-[50rem] h-[50rem] rounded-full blur-3xl opacity-20 absolute	"
       ></div>
-      
+
       <HeroBanner />
       <WorkSection />
+      <ContactSection />
     </div>
   );
 };

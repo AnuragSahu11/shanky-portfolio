@@ -27,8 +27,9 @@ const WorkSection = () => {
   return (
     <div className="w-full py-20 flex flex-col items-center">
       <div className="w-4/5	flex flex-col items-center">
-        <div className="flex w-full justify-start">
-          <p className="text-4xl font-bold">Work</p>
+        <div className="flex flex-col w-full justify-start">
+          <p className="font-casanova text-4xl ">Work</p>
+          <p>Selected Projects</p>
         </div>
         <div className="flex flex-col">
           {/* <div className="flex translate-x-[-20vw]"> */}

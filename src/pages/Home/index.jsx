@@ -44,9 +44,11 @@ const HomePage = () => {
         className="w-[50rem] h-[50rem] rounded-full blur-3xl opacity-20 absolute	"
       ></div>
 
-      <HeroBanner />
-      <WorkSection />
-      <ContactSection />
+      <div className="mx-2 lg:mx-60">
+        <HeroBanner />
+        <WorkSection />
+        <ContactSection />
+      </div>
     </div>
   );
 };

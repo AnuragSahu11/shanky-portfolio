@@ -2,11 +2,11 @@ const NavBar = () => {
   return (
     <div className="py-5 w-full bg-transparent flex items-center place-content-evenly absolute text-white">
       <div>
-        <SvgComponent />
+        <img src="../../../public/img/logo.svg" />
       </div>
       <div className="flex gap-20 text-lg font-thin content-center">
-        <p className="underline underline-offset-8">About</p>
-        <p className="underline underline-offset-8">Portofolio</p>
+        <p className="">About</p>
+        <p className="">Portofolio</p>
       </div>
       <div className="opacity-0">
         <SvgComponent />

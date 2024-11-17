@@ -27,6 +27,7 @@ const styles = {
 
 const HomePage = () => {
   const { gradientCircleOne, gradientCircleTwo, gradientCircleThree } = styles;
+  // console.log("hi")
 
   return (
     <div className="w-full overflow-hidden relative bg-stone-950 text-white">

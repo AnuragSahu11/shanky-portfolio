@@ -42,10 +42,10 @@ const HomePage = () => {
       ></div>
       <div
         style={gradientCircleThree}
-        className="w-[50rem] h-[50rem] rounded-full blur-3xl opacity-20 absolute	"
+        className="w-[50rem] h-[50rem] rounded-full blur-3xl opacity-20 absolute	z-0"
       ></div>
 
-      <div className="mx-2 lg:mx-60">
+      <div className="mx-2 lg:mx-60 z-10 relative">
         <HeroBanner />
         <WorkSection />
         <ContactSection />

@@ -70,22 +70,22 @@ const ContactSection = () => {
         <img
           name="linkdin"
           onClick={redirect}
-          src="../../../../public/img/LinkedIn.svg"
+          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/LinkedIn.svg"
         ></img>
         <img
           name="behance"
           onClick={redirect}
-          src="../../../../public/img/Behance.svg"
+          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Behance.svg"
         ></img>
         <img
           name="instagram"
           onClick={redirect}
-          src="../../../../public/img/Instagram.svg"
+          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/Instagram.svg"
         ></img>
         <img
           name="dribble"
           onClick={redirect}
-          src="../../../../public/img/Dribbble.svg"
+          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Dribbble.svg"
         ></img>
 
         {/* <span className="iconify mdi--linkedin"></span> */}

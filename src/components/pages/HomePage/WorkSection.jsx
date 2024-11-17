@@ -57,7 +57,11 @@ const WorkSection = () => {
               </div>
             </div>
             <div>
-              <img src={"../../../../public/img/boxing.jpg"} />
+              <img
+                src={
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/boxing.jpg"
+                }
+              />
             </div>
           </HoverEffectWrapper>
           {/* </div> */}
@@ -87,7 +91,11 @@ const WorkSection = () => {
               </div>
             </div>
             <div>
-              <img src={"../../../../public/img/robot.jpg"} />
+              <img
+                src={
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/robot.jpg"
+                }
+              />
             </div>
           </HoverEffectWrapper>
           <HoverEffectWrapper
@@ -114,7 +122,11 @@ const WorkSection = () => {
               </div>
             </div>
             <div>
-              <img src={"../../../../public/img/zoo.jpg"} />
+              <img
+                src={
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840441/zoo.jpg"
+                }
+              />
             </div>
           </HoverEffectWrapper>
           <HoverEffectWrapper
@@ -141,7 +153,11 @@ const WorkSection = () => {
               </div>
             </div>
             <div>
-              <img src={"../../../../public/img/carpentar.jpg"} />
+              <img
+                src={
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/carpentar.jpg"
+                }
+              />
             </div>
           </HoverEffectWrapper>
         </div>

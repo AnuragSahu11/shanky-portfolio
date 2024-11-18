@@ -41,7 +41,7 @@ const WorkSection = () => {
               // style={{
               //   transform: "translateZ(42px)",
               // }}
-              className="z-10 translate-z-[70px] translate-x-[40px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
+              className="z-10 translate-z-[70px] translate-x-[90px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
             >
               <p className="bg">
                 Boxing
@@ -50,7 +50,7 @@ const WorkSection = () => {
                 <br></br>
                 in VR
               </p>
-              <div className="w-32	h-0.5 bg-white	my-2"></div>
+              <div className="w-44 h-0.5 bg-white	my-2"></div>
               <div className="flex items-center">
                 <p className="text-sm font-thin tracking-wider	">VR Project </p>
                 <span className="ml-2 text-lg iconify mdi--arrow-right"></span>
@@ -73,7 +73,7 @@ const WorkSection = () => {
               // style={{
               //   transform: "translateZ(42px)",
               // }}
-              className="z-10 translate-z-[70px] translate-x-[70px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
+              className="z-10 translate-z-[70px] translate-x-[90px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
             >
               <p className="bg">
                 Shubhi:
@@ -82,7 +82,7 @@ const WorkSection = () => {
                 <br></br>
                 Robot
               </p>
-              <div className="w-32	h-0.5 bg-white	my-2"></div>
+              <div className="w-44	h-0.5 bg-white	my-2"></div>
               <div className="flex items-center">
                 <p className="text-sm font-thin tracking-wider	">
                   Tangible Computing{" "}
@@ -106,7 +106,7 @@ const WorkSection = () => {
               // style={{
               //   transform: "translateZ(42px)",
               // }}
-              className="z-10 translate-z-[70px] translate-x-[40px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
+              className="z-10 translate-z-[70px] translate-x-[80px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
             >
               <p className="bg">
                 RGZP:
@@ -115,7 +115,7 @@ const WorkSection = () => {
                 <br></br>
                 Thinking
               </p>
-              <div className="w-32	h-0.5 bg-white	my-2"></div>
+              <div className="w-44	h-0.5 bg-white	my-2"></div>
               <div className="flex items-center">
                 <p className="text-sm font-thin tracking-wider	">Case Study </p>
                 <span className="ml-2 text-lg iconify mdi--arrow-right"></span>
@@ -146,7 +146,7 @@ const WorkSection = () => {
                 <br></br>
                 Carpenter:
               </p>
-              <div className="w-32	h-0.5 bg-white	my-2"></div>
+              <div className="w-44	h-0.5 bg-white	my-2"></div>
               <div className="flex items-center">
                 <p className="text-sm font-thin tracking-wider	">Case Study </p>
                 <span className="ml-2 text-lg iconify mdi--arrow-right"></span>

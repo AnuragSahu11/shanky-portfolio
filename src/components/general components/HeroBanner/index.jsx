@@ -86,11 +86,11 @@ export const HeroBanner = () => {
             </p>
           </div>
           <div className="w-full lg:w-11/12 mt-10">
-            <p className="font-thin">
+            <p className="text-lg tracking-wide	 font-thin">
               Innovative XR and UI/UX Designer with 4+ years of experience in
-              immersive media design, specializing in creating engaging user
-              interfaces, AR/VR experiences, and leveraging Generative AI for
-              rapid prototyping and design solutions.
+              immersive media design,<br></br> specializing in creating engaging
+              user interfaces, AR/VR experiences, and leveraging <br></br>{" "}
+              Generative AI for rapid prototyping and design solutions.
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export const HeroBanner = () => {
               height: "400px",
             }}
             frameloop="always"
-            camera={{ position: [-1, 0, 6], fov: 45, near: 0.1, far: 10 }}
+            camera={{ position: [-1, 0, 6], fov: 40, near: 0.1, far: 10 }}
           >
             <My3DModel model={model} />
 

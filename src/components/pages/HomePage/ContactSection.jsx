@@ -154,7 +154,7 @@ const ContactSection = () => {
             <Toaster />
             <button
               onClick={onSubmit}
-              className="mt-5 bg-white text-black font-semibold w-full rounded py-2"
+              className="mt-10 bg-white text-black font-semibold w-full rounded py-2"
             >
               Submit
             </button>

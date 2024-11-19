@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 // import "./HoverEffectWrapper.css"; // Make sure to create this CSS file
 
 const cardStyles = {
+  perspective: "100px",
   height: "inherit",
   width: "inherit",
   borderRadius: "10px",
@@ -49,7 +50,7 @@ const HoverEffectWrapper = ({ children, className, childClassName }) => {
         ${center.y / 100},
         ${-center.x / 100},
         0,
-        ${Math.log(distance) * 2}deg
+        ${Math.log(distance) * 4}deg
       )
     `;
 
@@ -91,7 +92,7 @@ const HoverEffectWrapper = ({ children, className, childClassName }) => {
     <div
       className={className}
       style={{
-        perspective: "1500px",
+        perspective: "700px",
       }}
     >
       <div className={childClassName} style={cardStyles} ref={cardRef}>

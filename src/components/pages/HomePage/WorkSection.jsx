@@ -106,7 +106,7 @@ const WorkSection = () => {
               // style={{
               //   transform: "translateZ(42px)",
               // }}
-              className="z-10 translate-z-[70px] translate-x-[80px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
+              className="z-10 translate-x-[80px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
             >
               <p className="bg">
                 RGZP:

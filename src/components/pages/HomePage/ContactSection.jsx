@@ -36,6 +36,11 @@ const ContactSection = () => {
   const onSubmit = () => {
     sendEmail(formData.name, formData.email, formData.message);
     toast("Form Submitted Successfully");
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   const redirect = (e) => {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./MouseCursor.css"; // Import your CSS styles
 
 const MouseCursor = () => {

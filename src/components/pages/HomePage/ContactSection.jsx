@@ -10,7 +10,8 @@ const sendEmail = async (fromName, email, message) => {
     template_params: {
       to_name: "Shubhanshu",
       from_name: fromName,
-      message: `Sender's email - ${email}. ${message}`,
+      message: message,
+      from_email: email,
     },
   });
 };

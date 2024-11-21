@@ -25,7 +25,7 @@ const WorkSection = () => {
   ];
 
   return (
-    <div className="w-full py-20 flex flex-col">
+    <div id="work" className="w-full py-20 flex flex-col">
       <div className="lg:w-4/5	flex flex-col items-center">
         <div className="flex flex-col w-full justify-start">
           <p className="font-casanova text-5xl ">Work</p>

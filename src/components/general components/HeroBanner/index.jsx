@@ -74,7 +74,7 @@ export const HeroBanner = () => {
 
   return (
     <div className="h-dvh text-center lg:text-left flex flex-col items-center pt-60 gap-y-10 bg-transparent bg-transparent  font-bold w-full  relative	">
-      <div className="flex w-full">
+      <div className="flex w-full items-center">
         <div className="w-full lg:w-4/6">
           <div className="">
             <p className="text-5xl ">
@@ -95,7 +95,11 @@ export const HeroBanner = () => {
           </div>
         </div>
         <div className="w-2/6 hidden lg:block">
-          <Canvas
+          <img
+            className="h-100"
+            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1732200105/408-4082636_shawn-mendes-memoji-hd-png-download_1.png"
+          />
+          {/* <Canvas
             style={{
               // width: "1000px",
               height: "400px",
@@ -106,14 +110,16 @@ export const HeroBanner = () => {
             <My3DModel model={model} />
 
             <ambientLight intensity={1.2} />
-          </Canvas>
+          </Canvas> */}
         </div>
       </div>
-      <div className="mt-10 text-2xl text-center absolute bottom-4">
-        <SvgComponent />
-        <p className="pt-1 font-thin text-sm">Scroll</p>
-        <span className="iconify animate-bounce  mdi--chevron-double-down"></span>
-      </div>
+      <a href="#work">
+        <div className="mt-10 text-2xl text-center absolute bottom-4">
+          <SvgComponent />
+          <p className="pt-1 font-thin text-sm">Scroll</p>
+          <span className="iconify animate-bounce  mdi--chevron-double-down"></span>
+        </div>
+      </a>
     </div>
   );
 };

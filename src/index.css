@@ -6,3 +6,7 @@
   font-family: "Casanova";
   src: url("https://res.cloudinary.com/dym0xfe7y/raw/upload/v1731841242/Casanova_Scotia.otf");
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -46,19 +46,18 @@ const ContactSection = () => {
 
   const redirect = (e) => {
     let tabLink = "";
-    console.log(e.target.name);
     switch (e.target.name) {
       case "linkdin":
-        tabLink = "https://www.linkedin.com/feed/";
+        tabLink = "https://www.linkedin.com/in/subhcool238/";
         break;
       case "behance":
-        tabLink = "www.behance.com";
+        tabLink = "https://www.behance.net/subhcool238";
         break;
       case "instagram":
-        tabLink = "www.instagram.com";
+        tabLink = "https://www.instagram.com/shubhdesignverse/";
         break;
       case "dribble":
-        tabLink = "www.dribble.com";
+        tabLink = "https://dribbble.com/subhcool238";
         break;
     }
     window.open(tabLink, "_blank");
@@ -72,27 +71,35 @@ const ContactSection = () => {
           Get in touch or just to say! 👋
         </p>
       </div>
-      <div className="flex gap-10 my-20 justify-center">
-        <img
-          name="linkdin"
-          onClick={redirect}
-          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/LinkedIn.svg"
-        ></img>
-        <img
-          name="behance"
-          onClick={redirect}
-          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Behance.svg"
-        ></img>
-        <img
-          name="instagram"
-          onClick={redirect}
-          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/Instagram.svg"
-        ></img>
-        <img
-          name="dribble"
-          onClick={redirect}
-          src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Dribbble.svg"
-        ></img>
+      <div id="contact" className="flex gap-10 my-20 justify-center">
+        <a>
+          <img
+            name="linkdin"
+            onClick={redirect}
+            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/LinkedIn.svg"
+          ></img>
+        </a>
+        <a>
+          <img
+            name="behance"
+            onClick={redirect}
+            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Behance.svg"
+          ></img>
+        </a>
+        <a>
+          <img
+            name="instagram"
+            onClick={redirect}
+            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/Instagram.svg"
+          ></img>
+        </a>
+        <a>
+          <img
+            name="dribble"
+            onClick={redirect}
+            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Dribbble.svg"
+          ></img>
+        </a>
 
         {/* <span className="iconify mdi--linkedin"></span> */}
         {/* <span className="iconify mdi--behance"></span>
@@ -160,7 +167,7 @@ const ContactSection = () => {
             <Toaster />
             <button
               onClick={onSubmit}
-              className="mt-10 bg-white text-black font-semibold w-full rounded py-2"
+              className="mt-10 bg-white text-black font-semibold w-full rounded py-3"
             >
               Submit
             </button>

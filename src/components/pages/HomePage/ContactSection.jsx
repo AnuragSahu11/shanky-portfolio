@@ -64,16 +64,17 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mb-20">
+    <div id="contact" className="flex flex-col items-center mb-20">
       <div className="w-full">
         <p className="font-casanova text-5xl ">Contact</p>
         <p className="text-xl font-thin pl-10">
           Get in touch or just to say! 👋
         </p>
       </div>
-      <div id="contact" className="flex gap-10 my-20 justify-center">
+      <div className="flex gap-10 my-20 justify-center">
         <a>
           <img
+            className="hover-scale"
             name="linkdin"
             onClick={redirect}
             src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/LinkedIn.svg"
@@ -81,6 +82,7 @@ const ContactSection = () => {
         </a>
         <a>
           <img
+            className="hover-scale"
             name="behance"
             onClick={redirect}
             src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Behance.svg"
@@ -88,6 +90,7 @@ const ContactSection = () => {
         </a>
         <a>
           <img
+            className="hover-scale"
             name="instagram"
             onClick={redirect}
             src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/Instagram.svg"
@@ -95,6 +98,7 @@ const ContactSection = () => {
         </a>
         <a>
           <img
+            className="hover-scale"
             name="dribble"
             onClick={redirect}
             src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Dribbble.svg"
@@ -120,6 +124,7 @@ const ContactSection = () => {
                 Name
               </label>
               <input
+                value={formData.name}
                 type="text"
                 id="name"
                 name="name"
@@ -137,6 +142,7 @@ const ContactSection = () => {
                 Email Address
               </label>
               <input
+                value={formData.email}
                 type="email"
                 id="email"
                 name="email"
@@ -154,6 +160,7 @@ const ContactSection = () => {
                 Message
               </label>
               <textarea
+                value={formData.message}
                 type="textarea"
                 id="message"
                 rows="7"

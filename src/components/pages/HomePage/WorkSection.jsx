@@ -34,6 +34,9 @@ const WorkSection = () => {
         <div className="flex flex-col mt-20 gap-5 lg:gap-1">
           {/* <div className="flex translate-x-[-20vw]"> */}
           <HoverEffectWrapper
+            redirectLink={
+              "https://www.behance.net/gallery/208548179/EliteBox-A-Boxing-Training-in-VR"
+            }
             childClassName={"flex"}
             className="flex lg:translate-x-[-10vw]"
           >
@@ -66,6 +69,9 @@ const WorkSection = () => {
           </HoverEffectWrapper>
           {/* </div> */}
           <HoverEffectWrapper
+            redirectLink={
+              "https://www.behance.net/gallery/212394001/Generative-AI-Creative-Coding"
+            }
             childClassName={"flex"}
             className="flex lg:translate-x-[20vw]"
           >
@@ -76,16 +82,14 @@ const WorkSection = () => {
               className="z-10 translate-z-[70px] translate-x-[90px] flex flex-col justify-end bottom-0 lg:text-3xl font-semibold pr-5"
             >
               <p className="bg">
-                Shubhi:
-                <br></br>
-                An AI
-                <br></br>
-                Robot
+                Gen-AI &<br></br>
+                Creative <br></br>
+                Coding
               </p>
               <div className="w-44	h-0.5 bg-white	my-2"></div>
               <div className="flex items-center">
                 <p className="text-sm font-thin tracking-wider	">
-                  Tangible Computing{" "}
+                  Generative AI{" "}
                 </p>
                 <span className="ml-2 text-lg iconify mdi--arrow-right"></span>
               </div>
@@ -93,12 +97,15 @@ const WorkSection = () => {
             <div>
               <img
                 src={
-                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/robot.jpg"
+                  "https://res.cloudinary.com/dym0xfe7y/image/upload/v1732281516/Gen_AI_and_Creative_Coding.jpg"
                 }
               />
             </div>
           </HoverEffectWrapper>
           <HoverEffectWrapper
+            redirectLink={
+              "https://www.behance.net/gallery/208545219/Rajiv-Gandhi-Zoological-Park-Systems-Thinking"
+            }
             childClassName={"flex"}
             className="flex lg:translate-x-[-13vw]"
           >
@@ -130,6 +137,9 @@ const WorkSection = () => {
             </div>
           </HoverEffectWrapper>
           <HoverEffectWrapper
+            redirectLink={
+              "https://www.behance.net/gallery/208542459/Carpenters-Modern-Carpentry-Tools"
+            }
             childClassName={"flex"}
             className="flex lg:translate-x-[15vw]"
           >

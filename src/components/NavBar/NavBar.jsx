@@ -1,29 +1,98 @@
+import { useState } from "react";
+
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="z-50 py-5 w-full bg-transparent flex items-center place-content-evenly absolute text-white">
-      <div>
-        <img src="../../../public/img/logo.svg" />
+    <>
+      <div className="z-50 hidden lg:flex absolute w-full flex justify-center">
+        <div className=" max-w-[1200px] py-5 w-full bg-transparent flex items-center justify-between text-white">
+          <div>
+            <img src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/logo.svg" />
+          </div>
+          <div className="flex gap-14 text-lg font-thin content-center">
+            <a href="#">
+              <p className="tracking-wide hover-scale">Home</p>
+            </a>
+            <a href="#">
+              <p className="tracking-wide hover-scale">About</p>
+            </a>
+            <a href="#work">
+              <p className="tracking-wide hover-scale">Work</p>
+            </a>
+            <a href="#contact">
+              <p className="tracking-wide hover-scale">Contact</p>
+            </a>
+          </div>
+          <div className="">
+            <a href="https://drive.google.com/file/d/1QAmgtX51Q8rhDKNgkbHkKHxq17mCoH97/view">
+              <p className="underline underline-offset-4 tracking-wide hover-scale">
+                Resume
+              </p>
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-14 text-lg font-thin content-center">
-        <a href="#contact">
-          <p className="tracking-wide">Home</p>
+      <nav
+        className={`absolute w-full z-50 flex lg:hidden justify-between ${
+          isMenuOpen ? "bg-indigo-950" : "transparent"
+        } items-center p-4 text-white`}
+      >
+        <a href="#" className="text-2xl font-bold">
+          <img src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/logo.svg"></img>
         </a>
-        <a href="#about">
-          <p className="tracking-wide">About</p>
-        </a>
-        <a href="#work">
-          <p className="tracking-wide">Work</p>
-        </a>
-        <a href="#contact">
-          <p className="tracking-wide">Contact</p>
-        </a>
-      </div>
-      <div className="">
-        <a href="https://drive.google.com/file/d/1QAmgtX51Q8rhDKNgkbHkKHxq17mCoH97/view">
-          <p className="underline underline-offset-4 tracking-wide">Resume</p>
-        </a>
-      </div>
-    </div>
+        <span
+          className="text-2xl cursor-pointer lg:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          ☰
+        </span>
+        <ul
+          className={`lg:flex gap-6 ${
+            isMenuOpen
+              ? "flex fixed bottom-0 right-0 w-full h-screen flex-col absolute top-16 right-4 bg-indigo-950	 p-4 rounded-md"
+              : "hidden"
+          } lg:flex-row text-center`}
+        >
+          <li>
+            <a
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              href="#"
+              className="hover:text-yellow-500 text-2xl"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              href="#"
+              className="hover:text-yellow-500 text-2xl"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              href="#work"
+              className="hover:text-yellow-500 text-2xl"
+            >
+              Work
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              href="#contact"
+              className="hover:text-yellow-500 text-2xl"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 };
 

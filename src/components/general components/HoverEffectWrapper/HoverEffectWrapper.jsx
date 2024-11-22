@@ -26,7 +26,12 @@ const cardGlow = {
   // backgroundImage: "radial-gradient(circle at 50% -20%, #ffffff22, #0000000f)",
 };
 
-const HoverEffectWrapper = ({ children, className, childClassName }) => {
+const HoverEffectWrapper = ({
+  children,
+  className,
+  childClassName,
+  redirectLink,
+}) => {
   const cardRef = useRef(null);
   const glowRef = useRef(null);
   let bounds;
@@ -65,6 +70,12 @@ const HoverEffectWrapper = ({ children, className, childClassName }) => {
     // `;
   };
 
+  const redirect = () => {
+    if (redirectLink) {
+      window.open(redirectLink, "_blank");
+    }
+  };
+
   useEffect(() => {
     const cardElement = cardRef.current;
 
@@ -95,7 +106,12 @@ const HoverEffectWrapper = ({ children, className, childClassName }) => {
         perspective: "700px",
       }}
     >
-      <div className={childClassName} style={cardStyles} ref={cardRef}>
+      <div
+        onClick={redirect}
+        className={childClassName}
+        style={cardStyles}
+        ref={cardRef}
+      >
         {children}
         <div style={cardGlow} className="glow" ref={glowRef} />
       </div>

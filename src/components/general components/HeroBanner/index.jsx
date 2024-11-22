@@ -73,8 +73,8 @@ export const HeroBanner = () => {
   const model = useGLTF("./3d-model/sakky1.glb");
 
   return (
-    <div className="h-dvh text-center lg:text-left flex flex-col items-center pt-60 gap-y-10 bg-transparent bg-transparent  font-bold w-full  relative	">
-      <div className="flex w-full items-center">
+    <div className="h-dvh text-center lg:text-left flex flex-col items-center  gap-y-10 bg-transparent bg-transparent  font-bold w-full  relative	">
+      <div className="flex w-full h-full justify-center items-center">
         <div className="w-full lg:w-4/6">
           <div className="">
             <p className="text-5xl ">
@@ -88,16 +88,17 @@ export const HeroBanner = () => {
           <div className="w-full lg:w-11/12 mt-10">
             <p className="text-lg tracking-wide	 font-thin">
               Innovative XR and UI/UX Designer with 4+ years of experience in
-              immersive media design,<br></br> specializing in creating engaging
-              user interfaces, AR/VR experiences, and leveraging <br></br>{" "}
-              Generative AI for rapid prototyping and design solutions.
+              design, specializing in <br></br> creating engaging user
+              interfaces, AR/VR experiences, and leveraging Generative AI for{" "}
+              <br></br>
+              rapid prototyping and design solutions.
             </p>
           </div>
         </div>
         <div className="w-2/6 hidden lg:block">
           <img
             className="h-100"
-            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1732200105/408-4082636_shawn-mendes-memoji-hd-png-download_1.png"
+            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1732282844/Memoji_New-transformed_1.png"
           />
           {/* <Canvas
             style={{
@@ -113,13 +114,13 @@ export const HeroBanner = () => {
           </Canvas> */}
         </div>
       </div>
-      <a href="#work">
-        <div className="mt-10 text-2xl text-center absolute bottom-4">
+      <div className="mt-10 text-2xl text-center absolute bottom-4">
+        <a href="#work">
           <SvgComponent />
           <p className="pt-1 font-thin text-sm">Scroll</p>
           <span className="iconify animate-bounce  mdi--chevron-double-down"></span>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   );
 };

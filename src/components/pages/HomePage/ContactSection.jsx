@@ -16,7 +16,7 @@ const sendEmail = async (fromName, email, message) => {
   });
 };
 
-const ContactSection = () => {
+const ContactSection = ({ turnHoverOff, turnHoverOn }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -68,11 +68,11 @@ const ContactSection = () => {
       <div className="w-full">
         <p className="font-casanova text-5xl ">Contact</p>
         <p className="text-xl font-thin pl-10">
-          Get in touch or just to say! 👋
+          Get in touch or just say hi! 👋
         </p>
       </div>
       <div className="flex gap-10 my-20 justify-center">
-        <a>
+        <a onMouseOver={turnHoverOn} onMouseOut={turnHoverOff}>
           <img
             className="hover-scale"
             name="linkdin"
@@ -80,7 +80,7 @@ const ContactSection = () => {
             src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/LinkedIn.svg"
           ></img>
         </a>
-        <a>
+        <a onMouseOver={turnHoverOn} onMouseOut={turnHoverOff}>
           <img
             className="hover-scale"
             name="behance"
@@ -88,7 +88,7 @@ const ContactSection = () => {
             src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/Behance.svg"
           ></img>
         </a>
-        <a>
+        <a onMouseOver={turnHoverOn} onMouseOut={turnHoverOff}>
           <img
             className="hover-scale"
             name="instagram"
@@ -96,7 +96,7 @@ const ContactSection = () => {
             src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840440/Instagram.svg"
           ></img>
         </a>
-        <a>
+        <a onMouseOver={turnHoverOn} onMouseOut={turnHoverOff}>
           <img
             className="hover-scale"
             name="dribble"
@@ -147,7 +147,7 @@ const ContactSection = () => {
                 id="email"
                 name="email"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-stone-900 dark:border-stone-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter your name"
+                placeholder="Enter your email"
                 required
                 onChange={onInputChange}
               />
@@ -174,6 +174,8 @@ const ContactSection = () => {
             <Toaster />
             <button
               onClick={onSubmit}
+              onMouseOver={turnHoverOn}
+              onMouseOut={turnHoverOff}
               className="mt-10 bg-white text-black font-semibold w-full rounded py-3"
             >
               Submit

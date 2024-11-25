@@ -13,8 +13,8 @@ html {
 
 .cursor {
   z-index: 10000;
-  width: 50px; /* Size of the outer cursor */
-  height: 50px;
+  width: 40px; /* Size of the outer cursor */
+  height: 40px;
   border-radius: 100%; /* Circular shape */
   border: 1px solid white; /* Border color */
   transition: all 200ms ease-out; /* Smooth transition */
@@ -24,13 +24,24 @@ html {
 
 .cursor2 {
   z-index: 10000;
-  width: 20px; /* Size of the inner cursor */
-  height: 20px;
+  width: 10px; /* Size of the inner cursor */
+  height: 10px;
   border-radius: 100%; /* Circular shape */
   background-color: white; /* Inner cursor color */
-  opacity: 0.3; /* Slightly transparent */
+  opacity: 0.9; /* Slightly transparent */
   position: fixed; /* Fixed position on screen */
   transform: translate(-50%, -50%); /* Centering */
+  pointer-events: none; /* Prevents interference with other elements */
+}
+
+.cursor3 {
+  z-index: 10000;
+  width: 55px; /* Size of the outer cursor */
+  height: 55px;
+  border-radius: 100%; /* Circular shape */
+  border: 1px solid white; /* Border color */
+  transition: all 200ms ease-out; /* Smooth transition */
+  position: fixed; /* Fixed position on screen */
   pointer-events: none; /* Prevents interference with other elements */
 }
 

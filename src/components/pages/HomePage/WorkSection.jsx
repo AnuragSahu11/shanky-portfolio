@@ -6,7 +6,7 @@ const styleObj = {
   },
 };
 
-const WorkSection = () => {
+const WorkSection = ({ turnHoverOff, turnHoverOn }) => {
   const { firstImg } = styleObj;
 
   const imgArr = [
@@ -34,6 +34,8 @@ const WorkSection = () => {
         <div className="flex flex-col mt-20 gap-5 lg:gap-1">
           {/* <div className="flex translate-x-[-20vw]"> */}
           <HoverEffectWrapper
+            turnHoverOff={turnHoverOff}
+            turnHoverOn={turnHoverOn}
             redirectLink={
               "https://www.behance.net/gallery/208548179/EliteBox-A-Boxing-Training-in-VR"
             }
@@ -74,6 +76,8 @@ const WorkSection = () => {
             }
             childClassName={"flex"}
             className="flex lg:translate-x-[20vw]"
+            turnHoverOff={turnHoverOff}
+            turnHoverOn={turnHoverOn}
           >
             <div
               // style={{
@@ -108,6 +112,8 @@ const WorkSection = () => {
             }
             childClassName={"flex"}
             className="flex lg:translate-x-[-13vw]"
+            turnHoverOff={turnHoverOff}
+            turnHoverOn={turnHoverOn}
           >
             <div
               // style={{
@@ -142,6 +148,8 @@ const WorkSection = () => {
             }
             childClassName={"flex"}
             className="flex lg:translate-x-[15vw]"
+            turnHoverOff={turnHoverOff}
+            turnHoverOn={turnHoverOn}
           >
             <div
               // style={{

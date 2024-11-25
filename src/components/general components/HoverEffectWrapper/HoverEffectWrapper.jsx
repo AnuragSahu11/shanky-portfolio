@@ -31,6 +31,8 @@ const HoverEffectWrapper = ({
   className,
   childClassName,
   redirectLink,
+  turnHoverOff,
+  turnHoverOn,
 }) => {
   const cardRef = useRef(null);
   const glowRef = useRef(null);
@@ -101,6 +103,8 @@ const HoverEffectWrapper = ({
 
   return (
     <div
+      onMouseOver={turnHoverOn}
+      onMouseOut={turnHoverOff}
       className={className}
       style={{
         perspective: "700px",

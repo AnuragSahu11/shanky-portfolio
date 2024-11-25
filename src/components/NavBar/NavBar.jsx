@@ -1,31 +1,40 @@
 import { useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({ turnHoverOff, turnHoverOn }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
       <div className="z-50 hidden lg:flex absolute w-full flex justify-center">
         <div className=" max-w-[1200px] py-5 w-full bg-transparent flex items-center justify-between text-white">
-          <div>
+          <div href="#">
             <img src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1731840439/logo.svg" />
           </div>
           <div className="flex gap-14 text-lg font-thin content-center">
-            <a href="#">
-              <p className="tracking-wide hover-scale">Home</p>
+            <a onMouseOver={turnHoverOn} onMouseOut={turnHoverOff} href="#">
+              <p className="tracking-wide hover-scale button">Home</p>
             </a>
-            <a href="#">
-              <p className="tracking-wide hover-scale">About</p>
-            </a>
-            <a href="#work">
+            <a onMouseOver={turnHoverOn} onMouseOut={turnHoverOff} href="#work">
               <p className="tracking-wide hover-scale">Work</p>
             </a>
-            <a href="#contact">
+            <a
+              onMouseOver={turnHoverOn}
+              onMouseOut={turnHoverOff}
+              href="#contact"
+            >
               <p className="tracking-wide hover-scale">Contact</p>
+            </a>
+            <a onMouseOver={turnHoverOn} onMouseOut={turnHoverOff} href="#">
+              <p className="tracking-wide hover-scale">About</p>
             </a>
           </div>
           <div className="">
-            <a href="https://drive.google.com/file/d/1QAmgtX51Q8rhDKNgkbHkKHxq17mCoH97/view">
+            <a
+              onMouseOver={turnHoverOn}
+              onMouseOut={turnHoverOff}
+              target="_blank"
+              href="https://drive.google.com/file/d/1XgJTSQG_nMMIfGbS30yixn68Z3Wx0kQV/view?usp=sharing"
+            >
               <p className="underline underline-offset-4 tracking-wide hover-scale">
                 Resume
               </p>

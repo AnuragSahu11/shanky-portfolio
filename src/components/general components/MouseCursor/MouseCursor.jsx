@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./MouseCursor.css"; // Import your CSS styles
 
-const MouseCursor = () => {
+const MouseCursor = ({ hover }) => {
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
     const cursorInner = document.querySelector(".cursor2");
@@ -56,7 +56,7 @@ const MouseCursor = () => {
 
   return (
     <>
-      <div className="cursor hidden md:block"></div>
+      <div className={`cursor hidden md:block ${hover ? "cursor3" : ""}`}></div>
       <div className="cursor2 hidden md:block"></div>
       {/* Your other components or content can go here */}
     </>

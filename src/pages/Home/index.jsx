@@ -25,13 +25,13 @@ const styles = {
   },
 };
 
-const HomePage = () => {
+const HomePage = ({ turnHoverOff, turnHoverOn }) => {
   const { gradientCircleOne, gradientCircleTwo, gradientCircleThree } = styles;
   // console.log("hi")
 
   return (
     <div className="w-full overflow-hidden relative bg-stone-950 text-white">
-      <NavBar />
+      <NavBar turnHoverOff={turnHoverOff} turnHoverOn={turnHoverOn} />
       <div
         style={gradientCircleOne}
         className="w-[30rem] h-[30rem] rounded-full blur-3xl opacity-30 absolute	"
@@ -46,9 +46,9 @@ const HomePage = () => {
       ></div>
 
       <div className="max-w-[1200px] mx-auto z-10 relative">
-        <HeroBanner />
-        <WorkSection />
-        <ContactSection />
+        <HeroBanner turnHoverOff={turnHoverOff} turnHoverOn={turnHoverOn} />
+        <WorkSection turnHoverOff={turnHoverOff} turnHoverOn={turnHoverOn} />
+        <ContactSection turnHoverOff={turnHoverOff} turnHoverOn={turnHoverOn} />
       </div>
     </div>
   );

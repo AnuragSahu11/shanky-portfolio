@@ -1,4 +1,8 @@
+import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { useEffect, useRef } from "react";
 import TextScramble from "../TextScramble";
+import { useState } from "react";
 
 const styles = {
   linearTextGradient: {
@@ -9,32 +13,113 @@ const styles = {
     color: "transparent",
   },
 };
-export const HeroBanner = () => {
-  const { linearTextGradient } = styles;
+
+const My3DModel = ({ model }) => {
+  const modelRef = useRef();
+  const controlsRef = useRef();
+  const [mouseState, setMouseState] = useState({
+    clientX: 0,
+    clientY: 0,
+  });
+
+  // Function to handle mouse movement
+  const handleMouseMove = (event) => {
+    const x = (event.clientX / window.innerWidth) * 2 - 1; // Normalize x to [-1, 1]
+    const y = -(event.clientY / window.innerHeight) * 2 + 1; // Normalize y to [-1, 1]
+
+    // Calculate rotation based on mouse position
+    const rotationX = (-y * Math.PI) / 10; // Adjust sensitivity as needed
+    const rotationY = (x * Math.PI) / 10; // Adjust sensitivity as needed
+
+    if (modelRef.current) {
+      modelRef.current.rotation.x = rotationX;
+      modelRef.current.rotation.y = rotationY;
+    }
+  };
+
+  useFrame(() => {
+    controlsRef.current.update();
+  });
+
+  useEffect(() => {
+    // Add event listener for mouse movement
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
-    <div className="h-dvh flex flex-col items-center justify-center text-center gap-y-10 bg-transparent bg-transparent  font-bold w-full  relative	">
-      <div className="text-center">
-        <p className="text-5xl ">
-          Hello! I’m <span style={linearTextGradient}>Shubhanshu</span>{" "}
-        </p>
-        <p className="text-5xl">
-          I <span className="italic font-thin">design</span> <TextScramble />
-        </p>
+    <>
+      <primitive ref={modelRef} object={model.scene} scale={0.5} />;
+      <OrbitControls
+        ref={controlsRef}
+        autoRotate={true}
+        enableZoom={false}
+        enableRotate={true}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+        enablePan={false}
+        autoRotateSpeed={0}
+      />
+    </>
+  );
+};
+
+export const HeroBanner = () => {
+  const { linearTextGradient } = styles;
+  const model = useGLTF("./3d-model/sakky1.glb");
+
+  return (
+    <div className="h-dvh text-center lg:text-left flex flex-col items-center  gap-y-10 bg-transparent bg-transparent  font-bold w-full  relative	">
+      <div className="flex w-full h-full justify-center items-center">
+        <div className="w-full lg:w-4/6">
+          <div className="">
+            <p className="text-5xl ">
+              Hello! I’m <span style={linearTextGradient}>Shubhanshu</span>{" "}
+            </p>
+            <p className="text-5xl">
+              I <span className="italic font-thin">design</span>{" "}
+              <TextScramble />
+            </p>
+          </div>
+          <div className="w-full lg:w-11/12 mt-10">
+            <p className="text-lg tracking-wide	 font-thin">
+              Innovative XR and UI/UX Designer with 4+ years of experience in
+              design, specializing in <br></br> creating engaging user
+              interfaces, AR/VR experiences, and leveraging Generative AI for{" "}
+              <br></br>
+              rapid prototyping and design solutions.
+            </p>
+          </div>
+        </div>
+        <div className="w-2/6 hidden lg:block">
+          <img
+            className="h-100"
+            src="https://res.cloudinary.com/dym0xfe7y/image/upload/v1732282844/Memoji_New-transformed_1.png"
+          />
+          {/* <Canvas
+            style={{
+              // width: "1000px",
+              height: "400px",
+            }}
+            frameloop="always"
+            camera={{ position: [-1, 0, 6], fov: 40, near: 0.1, far: 10 }}
+          >
+            <My3DModel model={model} />
+
+            <ambientLight intensity={1.2} />
+          </Canvas> */}
+        </div>
       </div>
-      <div className="w-1/2">
-        <p className="font-thin">
-          A master’s student of Immersive Media Design from MITID Pune brings 4
-          years of combined experience as a graphic designer and UI/UX designer.
-          Additionally, I hold a certification in 3D animation and possess a
-          strong command of AI, adeptly creating and generating content using
-          Gen AI.
-        </p>
-      </div>
-      <div className="mt-10 text-2xl absolute bottom-4">
-        <SvgComponent />
-        <p className="pt-1 font-thin text-sm">Scroll</p>
-        <span className="iconify animate-bounce  mdi--chevron-double-down"></span>
+      <div className="mt-10 text-2xl text-center absolute bottom-4">
+        <a href="#work">
+          <SvgComponent />
+          <p className="pt-1 font-thin text-sm">Scroll</p>
+          <span className="iconify animate-bounce  mdi--chevron-double-down"></span>
+        </a>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useScramble } from "use-scramble";
 
 const TextScramble = ({ texts }) => {
@@ -44,7 +44,7 @@ const TextScramble = ({ texts }) => {
     return () => clearInterval(intervalRf);
   }, []);
 
-  return <p ref={ref} />;
+  return <span ref={ref} />;
 };
 
 export default TextScramble;

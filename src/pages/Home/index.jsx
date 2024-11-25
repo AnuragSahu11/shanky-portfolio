@@ -1,5 +1,6 @@
 import { HeroBanner } from "../../components/general components/HeroBanner";
 import NavBar from "../../components/NavBar/NavBar";
+import ContactSection from "../../components/pages/HomePage/ContactSection";
 import WorkSection from "../../components/pages/HomePage/WorkSection";
 
 const styles = {
@@ -26,6 +27,7 @@ const styles = {
 
 const HomePage = () => {
   const { gradientCircleOne, gradientCircleTwo, gradientCircleThree } = styles;
+  // console.log("hi")
 
   return (
     <div className="w-full overflow-hidden relative bg-stone-950 text-white">
@@ -40,11 +42,14 @@ const HomePage = () => {
       ></div>
       <div
         style={gradientCircleThree}
-        className="w-[50rem] h-[50rem] rounded-full blur-3xl opacity-20 absolute	"
+        className="w-[50rem] h-[50rem] rounded-full blur-3xl opacity-20 absolute	z-0"
       ></div>
-      
-      <HeroBanner />
-      <WorkSection />
+
+      <div className="max-w-[1200px] mx-auto z-10 relative">
+        <HeroBanner />
+        <WorkSection />
+        <ContactSection />
+      </div>
     </div>
   );
 };

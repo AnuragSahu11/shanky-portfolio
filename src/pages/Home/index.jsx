@@ -30,7 +30,7 @@ const HomePage = ({ turnHoverOff, turnHoverOn }) => {
   // console.log("hi")
 
   return (
-    <div className="w-full overflow-hidden relative bg-stone-950 text-white">
+    <div className="w-full overflow-hidden relative bg-stone-950 text-white px-5">
       <NavBar turnHoverOff={turnHoverOff} turnHoverOn={turnHoverOn} />
       <div
         style={gradientCircleOne}

@@ -33,7 +33,7 @@ const NavBar = ({ turnHoverOff, turnHoverOn }) => {
               onMouseOver={turnHoverOn}
               onMouseOut={turnHoverOff}
               target="_blank"
-              href="https://drive.google.com/file/d/1XgJTSQG_nMMIfGbS30yixn68Z3Wx0kQV/view?usp=sharing"
+              href="https://drive.google.com/file/d/1NdIMK8VD6KzoIW0vC2Y6RaHDHAxDAc9A/view?usp=sharing"
             >
               <p className="underline underline-offset-4 tracking-wide hover-scale">
                 Resume
@@ -43,7 +43,7 @@ const NavBar = ({ turnHoverOff, turnHoverOn }) => {
         </div>
       </div>
       <nav
-        className={`absolute w-full z-50 flex lg:hidden justify-between ${
+        className={`pr-10 absolute w-full z-50 flex lg:hidden justify-between ${
           isMenuOpen ? "bg-indigo-950" : "transparent"
         } items-center p-4 text-white`}
       >
